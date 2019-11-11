@@ -21,7 +21,7 @@ class Manager
 
     def employees
         #returns an `Array` of all the employees that the manager oversees
-        self.all.select {|employee| employee.manager}
+        Employee.all.select {|ee| ee.manager == self}
     end
 
     def hire_employee(name, department, salary)
